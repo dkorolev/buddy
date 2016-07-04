@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
   current::WaitableAtomic<bool> done(false);
 
   HTTP(FLAGS_port).Register("/", [](Request r) {
-    r("Hello, Buddy! Sup?\n");
+    r("Hello, Buddy! Sup? Chillin'?\n");
   });
 
   HTTP(FLAGS_port).Register("/shutdown", [&done](Request r) {
